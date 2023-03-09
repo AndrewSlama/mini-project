@@ -31,18 +31,18 @@ body {
   }
   
   .past {
-    background-color: #333333;
     color: white;
+    background: linear-gradient(90deg, rgb(78, 78, 78) 0%, rgb(64, 64, 65) 35%, rgb(44, 44, 44) 100%);
   }
   
   .present {
-    background-color: #ff6961;
     color: white;
+    background: linear-gradient(90deg, rgb(62, 248, 72) 0%, rgb(43, 250, 88) 35%, rgb(2, 250, 23) 100%);
   }
   
   .future {
-    background-color: #77dd77;
     color: white;
+    background: linear-gradient(90deg, rgb(235, 62, 62) 0%, rgb(241, 41, 41) 35%, rgb(255, 0, 0) 100%);
   }
   
   .saveBtn {
@@ -50,7 +50,7 @@ body {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: #06aed5;
-    color: white;
+    color: rgb(0, 0, 0);
   }
   
   .saveBtn i:hover {
