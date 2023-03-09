@@ -32,7 +32,7 @@ body {
   
   .past {
     color: white;
-    background: linear-gradient(90deg, rgb(78, 78, 78) 0%, rgb(64, 64, 65) 35%, rgb(44, 44, 44) 100%);
+    background: linear-gradient(90deg, rgb(87, 85, 85) 0%, rgb(76, 76, 80) 35%, rgb(44, 43, 43) 100%);
   }
   
   .present {
@@ -42,7 +42,7 @@ body {
   
   .future {
     color: white;
-    background: linear-gradient(90deg, rgb(235, 62, 62) 0%, rgb(241, 41, 41) 35%, rgb(255, 0, 0) 100%);
+    background: linear-gradient(90deg, rgb(250, 109, 109) 0%, rgb(241, 41, 41) 35%, rgb(255, 0, 0) 100%);
   }
   
   .saveBtn {
