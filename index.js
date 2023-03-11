@@ -1,4 +1,8 @@
-
+var thisHour = document.getElementById('');
+var isHour = '';
+var timeBlo = document.getElementById("time-block");
+var currentDay = document.getElementById("today");
+saveBtn = document.getElementById('fas-fa-save');
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
@@ -25,3 +29,6 @@ $(function () {
     // TODO: Add code to display the current date in the header of the page.
   });
   
+  saveBtn.addEventListener('click', function(event){
+    
+  })
