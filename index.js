@@ -2,12 +2,67 @@ var thisHour = document.getElementById('');
 var isHour = '';
 var timeBlo = document.getElementById("time-block");
 var currentDay = document.getElementById("today");
-saveBtn = document.getElementById('fas-fa-save');
+var saveBtn = document.querySelectorAll('.saveBtn');
+var workingDay = localStorage.getItem("textSave");
+var myDay = [
+    {
+        id: "hour-9",
+        text: '',
+    },  
+    {
+        id: "hour-10",
+        text: '',
+    },  
+    {
+        id: "hour-11",
+        text: '',
+    },  
+    {
+        id: "hour-12",
+        text: '',
+    },  
+    {
+        id: "hour-1",
+        text: '',
+    },  
+    {
+        id: "hour-2",
+        text: '',
+    },  
+    {
+        id: "hour-3",
+        text: '',
+    },  
+    {
+        id: "hour-4",
+        text: '',
+    },  
+    {
+        id: "hour-5",
+        text: '',
+    },   
+];
+
+
+function getHeaderDate() {
+    alert(dayjs());
+}
+saveBtn.forEach((btn) => { btn.addEventListener("click", (event) => 
+{   var values = Array.from(document.querySelectorAll('.description'))
+    .map(input => input.value);
+    alert(values);
+
+
+
+    localStorage.setItem('textSave', workingDay);
+    });
+ });
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
+
     
     // TODO: Add a listener for click events on the save button. This code should
     // use the id in the containing time-block as a key to save the user input in
@@ -29,6 +84,3 @@ $(function () {
     // TODO: Add code to display the current date in the header of the page.
   });
   
-  saveBtn.addEventListener('click', function(event){
-    
-  })
