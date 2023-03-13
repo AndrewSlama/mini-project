@@ -4,65 +4,101 @@ var timeBlo = document.getElementById("time-block");
 var currentDay = document.getElementById("today");
 var saveBtn = document.querySelectorAll('.saveBtn');
 var workingDay = localStorage.getItem("textSave");
+alert(typeof workingDay);
 var myDay = [
     {
-        id: "hour-9",
+        id: "textArea9",
         text: '',
     },  
     {
-        id: "hour-10",
+        id: "textArea10",
         text: '',
     },  
     {
-        id: "hour-11",
+        id: "textArea11",
         text: '',
     },  
     {
-        id: "hour-12",
+        id: "textArea12",
         text: '',
     },  
     {
-        id: "hour-1",
+        id: "textArea1",
         text: '',
     },  
     {
-        id: "hour-2",
+        id: "textArea2",
         text: '',
     },  
     {
-        id: "hour-3",
+        id: "textArea3",
         text: '',
     },  
     {
-        id: "hour-4",
+        id: "textArea4",
         text: '',
     },  
     {
-        id: "hour-5",
+        id: "textArea5",
         text: '',
     },   
 ];
+// alert(workingDay == null);
+// alert(!workingDay);
+// if (workingDay === null) {
+//     workingDay = myDay;
+// }
+// alert(JSON.stringify(workingDay));
+// function getHeaderDate() {
+//     alert(dayjs());
+// }
+// saveBtn.forEach((btn) => { btn.addEventListener("click", (event) => 
+// {   var values = Array.from(document.querySelectorAll('.description'))
+//     .map(input => input.value);
+//     alert(values);
+//     for (var i = 0; i < workingDay.length; i++) {
+//         workingDay[i].text = values[i];
+//     }
+//     alert(workingDay);
 
-
-function getHeaderDate() {
-    alert(dayjs());
-}
-saveBtn.forEach((btn) => { btn.addEventListener("click", (event) => 
-{   var values = Array.from(document.querySelectorAll('.description'))
-    .map(input => input.value);
-    alert(values);
-
-
-
-    localStorage.setItem('textSave', workingDay);
-    });
- });
+//     // localStorage.setItem('textSave', workingDay);
+//     });
+//  });
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-$(function () {
+function getHeaderDate() {
+    alert(dayjs());
+};
 
+
+$(function () {
+     alert(workingDay == null);
+    alert(!workingDay);
+if (workingDay === null || workingDay === undefined) {
+    workingDay = myDay;
+} else {
+    workingDay = JSON.parse(localStorage.getItem('textSave'));
+};
+    for (var i = 0; i > workingDay.length; i++) {
+        var textArea = document.getElementById(workingDay[i].id);
+        textArea.innerText = workingDay[i].text;
+    };
+    //alert(JSON.stringify(workingDay));
+
+
+saveBtn.forEach((btn) => { btn.addEventListener("click", (event) => 
+{   var values = Array.from(document.querySelectorAll('.description')).map(input => input.value);
+    for (var i = 0; i < workingDay.length; i++) {
+        workingDay[i].text = values[i];
+
+    }
+        alert(JSON.stringify(workingDay));
+
+        localStorage.setItem('textSave', JSON.stringify(workingDay));
+    });
+ });
     
     // TODO: Add a listener for click events on the save button. This code should
     // use the id in the containing time-block as a key to save the user input in
